@@ -16,7 +16,11 @@ font-family: '';
 
 /* Root */
 :root {
-
+    /* Color Theme */
+    --theme__clr_bluish_gray: ;
+    --theme__clr_forest_green: ;
+    --theme__clr_light_brown: ;
+    
 }
 
 /* 4K Devices/Screens */
