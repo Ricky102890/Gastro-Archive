@@ -1,7 +1,7 @@
 /* Fonts & Imports */
 @font-face {
-font-family: '';
-src: url();
+font-family: 'Quicksand';
+src: url(/assets/fonts/Quicksand_Book.otf);
 
 }
 
@@ -10,153 +10,144 @@ src: url();
 padding: 0;
 margin: 0;
 box-sizing: border-box;
-font-family: '';
+font-family: 'Quicksand', sans-serif;
 
 }
 
 /* Root */
 :root {
     /* Color Theme */
-    --theme__clr_bluish_gray: ;
-    --theme__clr_forest_green: ;
-    --theme__clr_light_brown: ;
-    
+    --theme__clr_bluish_gray: #486887;
+    --theme__clr_forest_green: #688748;
+    --theme__clr_light_brown: #876748;
+    --theme__clr_light_blueGray: #b5c2cf;
+    --theme__clr_lighter_blueGray: #dae0e7;
 }
 
-/* 4K Devices/Screens */
-@media (max-width: 2560px) {
 html {
     scroll-behavior: smooth;
 }
 
 body {
     width: 100%;
-    max-width: 2560px;
-
+    height: auto;
+    min-height: 100vh;
+    background: var(--theme__clr_bluish_gray);
 }
-
-.container {
+header {
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    height: 200px;
+    background-color: var(--theme__clr_light_blueGray);
+    margin: 0;
+    padding: 2rem;
 }
-
-}
-
-/* 1440p Devices/Screens */
- @media (max-width: 1440px) {
-html {
-    scroll-behavior: smooth;
-}
-
-body {
+nav {
     width: 100%;
-    max-width: 1440px;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
 }
-.container {
+.mega-wrapper {
+    width: fit-content;
+    height: auto;
+    display: inline-block;
+    margin: 0 auto;
+}
+.mega-logo-wrapper {
+    width: fit-content;
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+.mega-logo-wrapper span {
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    height: auto;
+    font-size: 3rem;
+    color: white;
+    text-shadow: 0 2px 2px var(--theme__clr_bluish_gray);
 }
-
-}
-    
-/* Laptops Default */  
-@media (max-width: 1024px) {
-html {
-    scroll-behavior: smooth;
-}
-
-body {
+/* Navigation Image Wrapper */
+.nav-img-wrapper {
     width: 100%;
-    max-width: 1024px;
+    height: auto;
+    display: inline-block;
+}
+.nav-img-wrapper img {
+    width: 100px;
+    height: auto;
+    object-fit: cover;
 }
 
-.container {
+/* Featured Section */
+.feat-wrapper {
+    width: 75%;
+    min-width: 375px;
+    height: auto;
+    margin: 1rem auto;
+    padding: 1rem 2rem;
+    background: var(--theme__clr_forest_green);
+}
+
+.feat-wrapper h2 {
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 0 1rem;
+    color: white;
+    text-shadow: 0 2px 2px var(--theme__clr_bluish_gray);
+    letter-spacing: .3rem;
 }
-
+.feat-carousel-wrapper {
+    width: 375px;
+    height: auto;
+    display: flex;
 }
-
-/* Tablets Default */
-
-@media (max-width: 768px) {
-/* HTML */
-html {
-    scroll-behavior: smooth;
+.feat-img-wrapper {
+    width: 50%;
+    height: auto;
+    position: relative;
+    transition: all 700ms ease;
 }
-
-/* Body */
-body {
+.feat-img-wrapper:hover {
+    width: 200%;
+    height: auto;
+}
+.feat-img-wrapper:hover > .feat-img-detail-wrapper {
+    display: block;
+    opacity: 1;
+}
+.feat-img-wrapper img {
+    width: 375px;
+    height: 375px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.feat-img-detail-wrapper {
     width: 100%;
-    max-width: 768px;
+    height: auto;
+    margin: 0;
+    padding: 1rem 2rem;
+    opacity: 0;
+    display: none;
+    position: absolute;
+    top: 50%;
+    background: rgba(0, 0, 0, .5);
 
 }
-
-/* Viewport Container */
-.container {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+.feat-img-detail-wrapper h4 {
+    color: white;
+    font-size: 1.5rem;
+    margin: .5rem 0;
 }
-
+.feat-img-detail-wrapper p {
+    color: var(--theme__clr_light_blueGray);
+    margin: .25rem 0;
 }
-
-/* Large Phones / Flagship SmartPhones */
-@media (max-width: 425px) {
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    width: 100%;
-    max-width: 425px;
-}
-
-.container {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-}
-
-/* Regular Phones */
-@media (max-width: 375px) {
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    width: 100%;
-    max-width: 375px;
-}
-
-.container {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-}
-
-/* Smallest Devices */
-@media (max-width: 320px) {
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    width: 100%;
-    max-width: 320px;
-}
-
-.container {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
+.feat-img-detail-wrapper button {
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--theme__clr_lighter_blueGray)
 }
