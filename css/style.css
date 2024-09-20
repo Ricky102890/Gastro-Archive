@@ -151,3 +151,12 @@ nav {
     background: transparent;
     color: var(--theme__clr_lighter_blueGray)
 }
+.feat-expand-wrapper {
+    width: 100%;
+    height: auto;
+    padding: .5rem 1rem;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
